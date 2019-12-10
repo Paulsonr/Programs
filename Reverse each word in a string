@@ -1,0 +1,13 @@
+import java.util.*;
+class Main{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        String str=sc.nextLine();
+        String str1[]=str.split(" ");
+        for(String temp : str1){
+            StringBuffer sb=new StringBuffer(temp);
+            sb.reverse();
+            System.out.print(sb+" ");
+        }
+    }
+}
