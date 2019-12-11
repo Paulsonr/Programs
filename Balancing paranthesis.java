@@ -11,9 +11,9 @@ public class Main{
             if(str1[i] == '(' || str1[i] == '[' || str1[i] == '{' ){
                 stk.push(str1[i]);
             }
-            else if(str1[i] == ')' || str1[i] == ']' || str1[i] == '}' ) {
+            else if(str1[i] == ')' || str1[i] == ']' || str1[i] == '}' || str1[i] == '*') {
                 char ch=getMatch(str1[i]);
-                if(ch == stk.peek()){
+                if(ch == stk.peek() || ch == '*'){
                     stk.pop();
                 }
                 else{
@@ -40,6 +40,12 @@ public class Main{
         }
         else if(c == '}'){
             return '{';
+        }
+        else if(c == '}'){
+            return '{';
+        }
+        else if(c == '*'){
+            return '*';
         }
         return 0; 
     }
